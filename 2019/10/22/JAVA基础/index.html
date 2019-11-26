@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="罗涛的个人博客">
 <meta property="og:description" content="1、面向对象的特征有哪些方面?答：面向对象的特征主要有以下几个方面：1）抽象： ​    抽象是将一类对象的共同特征总结出来构造类的过程，包括数据抽象和行为抽象两方面。抽象只关注对象有哪些属性和行为，并不关注这些行为的细节是什么。2）继承： ​    继承是从已有类得到继承信息创建新类的过程。提供继承信息的类被称为父类（超类、基类）；得到继承信息的类被称为子类（派生类）。继承让变化中的软件系统有了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-26T15:03:54.059Z">
+<meta property="og:updated_time" content="2019-11-26T15:24:44.627Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -341,6 +341,15 @@
 <p>default       √       √       ×      ×</p>
 <p>private       √        ×      ×      ×</p>
 <p>​    类的成员不写访问修饰时默认为 default。默认对于同一个包中的其他类相当于公开（public），对于不是同一个包中的其他类相当于私有（private）。受保护（protected）对子类相当于公开，对不是同一包中的没有父子关系的类相当于私有。</p>
+<h3 id="3、String-属于最基本的数据类型吗-？"><a href="#3、String-属于最基本的数据类型吗-？" class="headerlink" title="3、String 属于最基本的数据类型吗 ？"></a>3、String 属于最基本的数据类型吗 ？</h3><p>基本数据类型只有 8 个：</p>
+<p>boolean，char，byte，short，int，long，float，double</p>
+<p>对应的包装类（java是严格按照面向对象的方式，所以基本数据类型都有对应的包装类，int–&gt;Integer 叫装箱过程，反之称为拆箱）：</p>
+<p>Boolean，Character，Byte，Short，Integer，Long，Float，Double </p>
+<p>除了基本类型和枚举类型，剩下的都是引用类型。 </p>
+<h3 id="4、Java-有没有-goto"><a href="#4、Java-有没有-goto" class="headerlink" title="4、Java 有没有 goto?"></a>4、Java 有没有 goto?</h3><p>​    goto 是 Java 中的保留字，在目前版本的 Java 中没有使用，另外const也属于保留字并未使用。</p>
+<h3 id="5、关于内存中的栈、堆和静态存储区的用法。"><a href="#5、关于内存中的栈、堆和静态存储区的用法。" class="headerlink" title="5、关于内存中的栈、堆和静态存储区的用法。"></a>5、关于内存中的栈、堆和静态存储区的用法。</h3><p>​    通常我们<u>定义一个基本数据类型的变量，一个对象的引用，还有就是函数调用的现场保存都使用内存中的栈空间</u>；<u>通过 new 关键字和构造器创建的对象放在堆空间</u>；<u>程序中的字面量（literal）如直接书写的 100、“hello”和常量都是放在静态存储区中</u>。栈空间操作最快但是也很小，通常大量的对象都是放在堆空间，整个内存包括硬盘上的虚拟内存都可以被当成堆空间来使用。</p>
+<p> String str = new String(“hello”)  语句中 str 放在栈上，用 new 创建出来的字符串对象放在堆上，而“hello”这个字面量放在静态存储区</p>
+<h3 id="6、数组有没有-length-方法-String-有没有-length-方法？"><a href="#6、数组有没有-length-方法-String-有没有-length-方法？" class="headerlink" title="6、数组有没有 length()方法?String 有没有 length()方法？"></a>6、数组有没有 length()方法?String 有没有 length()方法？</h3><p>​    数组没有 length()方法，有 length 的属性。String 有 length()方法。JavaScript 中，获得字符串的长度是通过 length 属性得到的，这一点容易和 Java 混淆。 </p>
 
       
     </div>
@@ -511,7 +520,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、面向对象的特征有哪些方面"><span class="nav-number">1.</span> <span class="nav-text">1、面向对象的特征有哪些方面?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、访问修饰符-public-private-protected-以及不写（默认）时的区别"><span class="nav-number">2.</span> <span class="nav-text">2、访问修饰符 public,private,protected,以及不写（默认）时的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、面向对象的特征有哪些方面"><span class="nav-number">1.</span> <span class="nav-text">1、面向对象的特征有哪些方面?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、访问修饰符-public-private-protected-以及不写（默认）时的区别"><span class="nav-number">2.</span> <span class="nav-text">2、访问修饰符 public,private,protected,以及不写（默认）时的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、String-属于最基本的数据类型吗-？"><span class="nav-number">3.</span> <span class="nav-text">3、String 属于最基本的数据类型吗 ？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、Java-有没有-goto"><span class="nav-number">4.</span> <span class="nav-text">4、Java 有没有 goto?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、关于内存中的栈、堆和静态存储区的用法。"><span class="nav-number">5.</span> <span class="nav-text">5、关于内存中的栈、堆和静态存储区的用法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、数组有没有-length-方法-String-有没有-length-方法？"><span class="nav-number">6.</span> <span class="nav-text">6、数组有没有 length()方法?String 有没有 length()方法？</span></a></li></ol></div>
             
 
           </div>
